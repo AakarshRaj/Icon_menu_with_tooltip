@@ -1,0 +1,78 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.main
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_container
+{
+    position: relative;
+    height: 385px;
+    width: 70px;
+    background: linear-gradient(65deg, #12c2e9,#c471ed,#f64f59);
+    border-radius: 4px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.icons
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+}
+.icon
+{
+    height: 60px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 3px;
+}
+.fab
+{
+    font-size: 25px;
+}
+.tooltip
+{
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: linear-gradient(65deg, #12c2e9 20%,#c471ed,#f64f59);
+    font-size: 18px;
+}
+.tooltip::before
+{
+    position: absolute;
+    left: -6px;
+    transform: translateY(46%) rotate(45deg);
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #12c2e9;
+}
+.icon:hover .tooltip
+{
+    opacity: 1;
+    transform: translateX(140px);
+}
